@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DGB Financial Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
+
+<body>
+
+    <!-- Loading / Welcome Screen -->
+    <div class="welcome-screen" id="welcomeScreen">
+        <div class="welcome-content">
+            <div class="bank-logo">
+                <i class="fa-solid fa-building-columns"></i>
+            </div>
+
+            <p class="small-title">DGB FINANCIAL</p>
+
+            <h1>Welcome to Your<br>
+                <span>Financial Center</span>
+            </h1>
+
+            <p>
+                Manage accounts, calculate interest,
+                monitor transactions and organize your finances.
+            </p>
+
+            <button onclick="enterDashboard()">
+                Enter Dashboard
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+
+
+    <!-- Main Dashboard -->
+    <div class="dashboard" id="dashboard">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="brand">
+                <div class="brand-icon">
+                    <i class="fa-solid fa-building-columns"></i>
+                </div>
+
+                <div>
+                    <h2>DGB</h2>
+                    <span>FINANCIAL</span>
+                </div>
+            </div>
+
+            <nav>
+
+                <a href="#dashboard-home" class="active">
+                    <i class="fa-solid fa-chart-line"></i>
+                    Dashboard
+                </a>
+
+                <a href="#accounts">
+                    <i class="fa-solid fa-wallet"></i>
+                    Bank Accounts
+                </a>
+
+                <a href="#interest">
+                    <i class="fa-solid fa-percent"></i>
+                    Interest Calculator
+                </a>
+
+                <a href="#accounting">
+                    <i class="fa-solid fa-calculator"></i>
+                    Accounting
+                </a>
+
+                <a href="#transactions">
+                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                    Transactions
+                </a>
+
+                <a href="#rates">
+                    <i class="fa-solid fa-chart-column"></i>
+                    Interest Rates
+                </a>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+
+                <div class="secure-box">
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                    <div>
+                        <strong>Secure Banking</strong>
+                        <small>Demo environment</small>
+                    </div>
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- Header -->
+            <header class="topbar">
+
+                <div>
+                    <p class="welcome-text">Financial Overview</p>
+                    <h1>Good Evening, Ratanak</h1>
+                </div>
+
+                <div class="header-actions">
+
+                    <button class="icon-btn">
+                        <i class="fa-regular fa-bell"></i>
+                    </button>
+
+                    <div class="profile">
+                        <div class="profile-avatar">R</div>
+
+                        <div>
+                            <strong>Ratanak</strong>
+                            <span>Personal Account</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- Overview Cards -->
+            <section class="overview" id="dashboard-home">
+
+                <div class="balance-card">
+
+                    <div class="card-top">
+                        <span>Total Balance</span>
+
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </div>
+
+                    <h2>$24,850.75</h2>
+
+                    <div class="balance-footer">
+                        <span>
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+                            +4.82%
+                        </span>
+
+                        <small>This month</small>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-piggy-bank"></i>
+                    </div>
+
+                    <span>Savings</span>
+
+                    <h3>$15,420.50</h3>
+
+                    <p>
+                        <i class="fa-solid fa-arrow-up"></i>
+                        +$820 this month
+                    </p>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+
+                    <span>Interest Earned</span>
+
+                    <h3>$428.25</h3>
+
+                    <p>
+                        <i class="fa-solid fa-arrow-up"></i>
+                        +12.4% this year
+                    </p>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-credit-card"></i>
+                    </div>
+
+                    <span>Monthly Spending</span>
+
+                    <h3>$2,840.20</h3>
+
+                    <p>
+                        <i class="fa-solid fa-arrow-down"></i>
+                        8.2% lower
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- Accounts -->
+            <section class="section" id="accounts">
+
+                <div class="section-heading">
+
+                    <div>
+                        <p class="section-label">PORTFOLIO</p>
+                        <h2>Bank Accounts</h2>
+                    </div>
+
+                    <button class="primary-btn">
+                        <i class="fa-solid fa-plus"></i>
+                        Add Account
+                    </button>
+
+                </div>
+
+
+                <div class="accounts-grid">
+
+                    <div class="account-card">
+
+                        <div class="account-header">
+
+                            <div class="account-symbol">
+                                <i class="fa-solid fa-building-columns"></i>
+                            </div>
+
+                            <span class="status">
+                                Active
+                            </span>
+
+                        </div>
+
+                        <p>Personal Savings</p>
+
+                        <h3>$15,420.50</h3>
+
+                        <div class="account-number">
+                            **** **** **** 2845
+                        </div>
+
+                        <div class="account-bottom">
+                            <span>Interest</span>
+                            <strong>3.00% p.a.</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="account-card silver">
+
+                        <div class="account-header">
+
+                            <div class="account-symbol">
+                                <i class="fa-solid fa-landmark"></i>
+                            </div>
+
+                            <span class="status">
+                                Active
+                            </span>
+
+                        </div>
+
+                        <p>Current Account</p>
+
+                        <h3>$7,930.25</h3>
+
+                        <div class="account-number">
+                            **** **** **** 7192
+                        </div>
+
+                        <div class="account-bottom">
+                            <span>Interest</span>
+                            <strong>3.00% p.a.</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="account-card dark-card">
+
+                        <div class="account-header">
+
+                            <div class="account-symbol">
+                                <i class="fa-solid fa-vault"></i>
+                            </div>
+
+                            <span class="status">
+                                Active
+                            </span>
+
+                        </div>
+
+                        <p>Fixed Deposit</p>
+
+                        <h3>$1,500.00</h3>
+
+                        <div class="account-number">
+                            12 Month Term
+                        </div>
+
+                        <div class="account-bottom">
+                            <span>Interest</span>
+                            <strong>4.50% p.a.</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Interest Calculator -->
+            <section class="section" id="interest">
+
+                <div class="section-heading">
+
+                    <div>
+                        <p class="section-label">FINANCIAL TOOL</p>
+                        <h2>Interest Calculator</h2>
+                    </div>
+
+                </div>
+
+
+                <div class="calculator">
+
+                    <div class="calculator-form">
+
+                        <label>
+                            Principal Amount
+                        </label>
+
+                        <div class="input-box">
+                            <span>$</span>
+
+                            <input
+                                type="number"
+                                id="principal"
+                                value="10000"
+                            >
+                        </div>
+
+
+                        <label>
+                            Annual Interest Rate
+                        </label>
+
+                        <div class="input-box">
+                            <input
+                                type="number"
+                                id="rate"
+                                value="3"
+                                step="0.01"
+                            >
+
+                            <span>%</span>
+                        </div>
+
+
+                        <label>
+                            Time Period
+                        </label>
+
+                        <div class="input-box">
+
+                            <input
+                                type="number"
+                                id="years"
+                                value="1"
+                                step="0.1"
+                            >
+
+                            <span>Years</span>
+
+                        </div>
+
+
+                        <button
+                            class="calculate-btn"
+                            onclick="calculateInterest()"
+                        >
+                            Calculate Interest
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                    </div>
+
+
+                    <div class="calculator-result">
+
+                        <span>Estimated Interest</span>
+
+                        <h2 id="interestResult">
+                            $300.00
+                        </h2>
+
+                        <div class="result-line">
+                            <span>Principal</span>
+                            <strong id="resultPrincipal">$10,000.00</strong>
+                        </div>
+
+                        <div class="result-line">
+                            <span>Total Balance</span>
+                            <strong id="totalBalance">$10,300.00</strong>
+                        </div>
+
+                        <div class="formula">
+                            Simple Interest = P × R × T
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Interest Rates -->
+            <section class="section" id="rates">
+
+                <div class="section-heading">
+
+                    <div>
+                        <p class="section-label">MARKET DATA</p>
+                        <h2>Interest Rate Table</h2>
+                    </div>
+
+                </div>
+
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+                                <th>Product</th>
+                                <th>Currency</th>
+                                <th>Term</th>
+                                <th>Monthly Interest</th>
+                                <th>Maturity Interest</th>
+                                <th>Status</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>
+                                    <i class="fa-solid fa-piggy-bank table-icon"></i>
+                                    Savings
+                                </td>
+
+                                <td>USD</td>
+                                <td>Flexible</td>
+                                <td>—</td>
+                                <td>3.00%</td>
+
+                                <td>
+                                    <span class="active-badge">
+                                        Available
+                                    </span>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    <i class="fa-solid fa-vault table-icon"></i>
+                                    Fixed Deposit
+                                </td>
+
+                                <td>USD</td>
+                                <td>6 Months</td>
+                                <td>3.75%</td>
+                                <td>4.00%</td>
+
+                                <td>
+                                    <span class="active-badge">
+                                        Available
+                                    </span>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    <i class="fa-solid fa-vault table-icon"></i>
+                                    Fixed Deposit
+                                </td>
+
+                                <td>USD</td>
+                                <td>12 Months</td>
+                                <td>4.25%</td>
+                                <td>4.50%</td>
+
+                                <td>
+                                    <span class="active-badge">
+                                        Available
+                                    </span>
+                                </td>
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    <i class="fa-solid fa-vault table-icon"></i>
+                                    Fixed Deposit
+                                </td>
+
+                                <td>KHR</td>
+                                <td>24 Months</td>
+                                <td>5.75%</td>
+                                <td>6.00%</td>
+
+                                <td>
+                                    <span class="active-badge">
+                                        Available
+                                    </span>
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+            <!-- Accounting -->
+            <section class="section" id="accounting">
+
+                <div class="section-heading">
+
+                    <div>
+                        <p class="section-label">ACCOUNTING</p>
+                        <h2>Financial Accounting</h2>
+                    </div>
+
+                </div>
+
+
+                <div class="accounting-grid">
+
+                    <div class="accounting-card">
+
+                        <i class="fa-solid fa-arrow-up-right-dots"></i>
+
+                        <span>Total Income</span>
+
+                        <h3>$8,420.00</h3>
+
+                        <p>+6.5% compared with last month</p>
+
+                    </div>
+
+
+                    <div class="accounting-card">
+
+                        <i class="fa-solid fa-arrow-down-right-dots"></i>
+
+                        <span>Total Expenses</span>
+
+                        <h3>$3,280.50</h3>
+
+                        <p>−4.2% compared with last month</p>
+
+                    </div>
+
+
+                    <div class="accounting-card">
+
+                        <i class="fa-solid fa-scale-balanced"></i>
+
+                        <span>Net Balance</span>
+
+                        <h3>$5,139.50</h3>
+
+                        <p>Healthy financial position</p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Transactions -->
+            <section class="section" id="transactions">
+
+                <div class="section-heading">
+
+                    <div>
+                        <p class="section-label">ACCOUNT ACTIVITY</p>
+                        <h2>Recent Transactions</h2>
+                    </div>
+
+                    <button class="outline-btn">
+                        View All
+                    </button>
+
+                </div>
+
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+                                <th>Transaction</th>
+                                <th>Date</th>
+                                <th>Category</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+
+                                <td>
+                                    <i class="fa-solid fa-arrow-down transaction-income"></i>
+                                    Salary Deposit
+                                </td>
+
+                                <td>14 Sep 2026</td>
+
+                                <td>Income</td>
+
+                                <td class="positive">
+                                    +$1,850.00
+                                </td>
+
+                                <td>
+                                    <span class="completed">
+                                        Completed
+                                    </span>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    <i class="fa-solid fa-cart-shopping transaction-expense"></i>
+                                    Online Shopping
+                                </td>
+
+                                <td>13 Sep 2026</td>
+
+                                <td>Shopping</td>
+
+                                <td class="negative">
+                                    -$120.50
+                                </td>
+
+                                <td>
+                                    <span class="completed">
+                                        Completed
+                                    </span>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    <i class="fa-solid fa-bolt transaction-expense"></i>
+                                    Electricity Bill
+                                </td>
+
+                                <td>12 Sep 2026</td>
+
+                                <td>Utilities</td>
+
+                                <td class="negative">
+                                    -$65.20
+                                </td>
+
+                                <td>
+                                    <span class="completed">
+                                        Completed
+                                    </span>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>
+                                    <i class="fa-solid fa-percent transaction-income"></i>
+                                    Interest Payment
+                                </td>
+
+                                <td>10 Sep 2026</td>
+
+                                <td>Interest</td>
+
+                                <td class="positive">
+                                    +$42.25
+                                </td>
+
+                                <td>
+                                    <span class="completed">
+                                        Completed
+                                    </span>
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+            <footer>
+
+                <p>
+                    DGB Financial Dashboard
+                </p>
+
+                <span>
+                    Demo interface for educational purposes
+                </span>
+
+            </footer>
+
+        </main>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
